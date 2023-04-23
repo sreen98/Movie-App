@@ -16,8 +16,8 @@ a {
   text-decoration: none;
 }
 
-body {
-  background: var(--primary-color);
+.moviecontainer {
+  background: #090e13;
 }
 .container {
   margin: 0px 40px;

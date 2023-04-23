@@ -6,7 +6,6 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import MovieDetail from "./component/MovieDetail";
 import PageNotFound from "./component/PageNotFound";
-import Spinner from "react-bootstrap/Spinner";
 
 function App() {
   return (

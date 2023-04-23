@@ -22,3 +22,9 @@ a {
 .container {
   margin: 0px 40px;
 }
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

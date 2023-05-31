@@ -8,7 +8,7 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(toggeleLoader(true));
-    dispatch({ type: sagaActions.FETCH_DATA_SAGA });
+    dispatch({ type: sagaActions.FETCH_ALL_MOVIES });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

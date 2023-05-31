@@ -9,7 +9,6 @@ const loaderSlice = createSlice({
   initialState,
   reducers: {
     toggeleLoader: (state, action) => {
-      console.log("toggeleLoader reducer", action.payload);
       state.loader = action.payload;
     },
   },

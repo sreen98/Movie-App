@@ -8,7 +8,6 @@ import Spinner from "react-bootstrap/Spinner";
 const MovieListing = () => {
   const movies = useSelector((state) => state.movies.movies);
   const isloader = useSelector((state) => state.loader.loader);
-  console.log("isloader", isloader);
   const [showDetail, setShowDetail] = useState(false);
   const [movieDetail, setMovieDetail] = useState({});
   const onMovieClick = (id) => {

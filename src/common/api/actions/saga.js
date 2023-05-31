@@ -7,8 +7,10 @@ import { toggeleLoader } from "./loaderSlice";
 
 export function* fetchDataSaga() {
   try {
-    let response = yield call(() => movieApi.get(`/movie?api_key=${APIKEY}`));
-    yield put(addMovies(response.data.results));
+    // let response = yield call(() => movieApi.get(`/movie?api_key=${APIKEY}`));
+    // yield put(addMovies(response.data.results));
+    let response = yield call(() => movieApi.get(`/Issues`));
+    yield put(addMovies(response.data));
     yield put(toggeleLoader(false));
   } catch (e) {
     yield put({ type: "TODO_FETCH_FAILED" });

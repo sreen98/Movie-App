@@ -1,0 +1,53 @@
+{
+  "Issues": [
+    {
+      "id": "1",
+      "title": "John Wick: Chapter 4",
+      "description": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes",
+      "duration": "2hr 50m",
+      "genre": "Action"
+    },
+    {
+      "id": "2",
+      "title": "The Super Mario Bros",
+      "description": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+      "duration": "2hr 50m",
+      "genre": "Thriller"
+    },
+    {
+      "id": "3",
+      "title": "Fast X",
+      "description": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever",
+      "duration": "2hr 50m",
+      "genre": "Action"
+    },
+    {
+      "id": "4",
+      "title": "The Little Mermaid",
+      "description": "The youngest of King Triton’s daughters, and the most defiant, Ariel longs to find out more about the world beyond the sea, and while visiting the surface, falls for the dashing Prince Eric. With mermaids forbidden to interact with humans, Ariel makes a deal with the evil sea witch, Ursula, which gives her a chance to experience life on land, but ultimately places her life – and her father’s crown – in jeopardy.",
+      "duration": "2hr 50m",
+      "genre": "Drama"
+    },
+    {
+      "id": "5",
+      "title": "Sisu",
+      "description": "Deep in the wilderness of Lapland, Aatami Korpi is searching for gold but after he stumbles upon Nazi patrol, a breathtaking and gold-hungry chase through the destroyed and mined Lapland wilderness begins.",
+      "duration": "2hr 50m",
+      "genre": "Action"
+    },
+    {
+      "id": "6",
+      "title": "Evil Dead Rise",
+      "description": "Three siblings find an ancient vinyl that gives birth to bloodthirsty demons that run amok in a Los Angeles apartment building and thrusts them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+      "duration": "2hr 50m",
+      "genre": "Thriller"
+    },
+    {
+      "id": "7",
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "description": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+      "duration": "2hr 50m",
+      "genre": "Drama"
+    }
+  ]
+}

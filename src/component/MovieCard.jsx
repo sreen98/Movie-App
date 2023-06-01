@@ -8,7 +8,14 @@ const MovieCard = (props) => {
     <div className="card-item" onClick={() => props.handleClick(data.id)}>
       <div className="card-inner">
         <div className="card-top">
-          <img src={data.imgURL} alt={data.title} />
+          <img
+            src={
+              data.imgURL
+                ? data.imgURL
+                : "https://dummyimage.com/600x400/ffffff/000000.png&text=Placeholder+image"
+            }
+            alt={data.title}
+          />
         </div>
         <div className="card-bottom">
           <div className="card-info">

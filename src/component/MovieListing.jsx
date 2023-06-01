@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import MovieCard from "./MovieCard";
 import Spinner from "react-bootstrap/Spinner";
+import Button from "react-bootstrap/Button";
 import "../styling/MovieListing.css";
 import MovieDetail from "./MovieDetail";
 import MovieForm from "./MovieForm";
@@ -64,9 +65,9 @@ const MovieListing = () => {
             <div>
               <div className="subheader">
                 <h2>Movies</h2>
-                <button className="addButton" onClick={onAddClick}>
+                <Button variant="secondary" onClick={onAddClick}>
                   Add Movie
-                </button>
+                </Button>
               </div>
               <div className="movie-container">
                 {movies?.length &&

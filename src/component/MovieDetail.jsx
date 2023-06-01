@@ -1,6 +1,7 @@
 import React from "react";
 import "../styling/MovieDetail.css";
 import "../styling/MovieCard.css";
+import Button from "react-bootstrap/Button";
 import {
   toggleShowForm,
   toggleisEdit,
@@ -40,7 +41,16 @@ const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
               }}
             >
               <div className="card-top">
-                {<img src={details.imgURL} alt={details.title} />}
+                {
+                  <img
+                    src={
+                      details.imgURL
+                        ? details.imgURL
+                        : "https://dummyimage.com/600x400/ffffff/000000.png&text=Placeholder+image"
+                    }
+                    alt={details.title}
+                  />
+                }
               </div>
             </div>
 
@@ -57,18 +67,15 @@ const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
                 </span>
               </div>
               <div className="cardfooter">
-                <button
-                  className="editButton"
-                  onClick={() => onClickEdit(details)}
-                >
+                <Button variant="primary" onClick={() => onClickEdit(details)}>
                   Edit
-                </button>
-                <button
-                  className="deleteButton"
+                </Button>
+                <Button
+                  variant="danger"
                   onClick={() => onClickDelete(details.id)}
                 >
                   Delete
-                </button>
+                </Button>
               </div>
             </div>
           </div>

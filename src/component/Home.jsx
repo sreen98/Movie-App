@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import MovieListing from "./MovieListing";
 import { useDispatch } from "react-redux";
-import { sagaActions } from "../common/api/actions/sagaActions";
+import { sagaActions } from "../actions/sagaActions";
 
 const Home = () => {
   const dispatch = useDispatch();

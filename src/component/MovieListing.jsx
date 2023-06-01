@@ -4,12 +4,12 @@ import MovieCard from "./MovieCard";
 import "../styling/MovieListing.css";
 import MovieDetail from "./MovieDetail";
 import MovieForm from "./MovieForm";
-import { sagaActions } from "../common/api/actions/sagaActions";
+import { sagaActions } from "../actions/sagaActions";
 import {
   toggleShowForm,
   toggleisEdit,
   setEditDetail,
-} from "../common/api/actions/movieSlice";
+} from "../actions/movieSlice";
 
 const MovieListing = () => {
   const movies = useSelector((state) => state.movies.movies);
@@ -17,7 +17,6 @@ const MovieListing = () => {
   const dispatch = useDispatch();
   const [showDetail, setShowDetail] = useState(false);
   const [movieDetail, setMovieDetail] = useState({});
-  console.log("movies", movies);
   const onMovieClick = (id) => {
     setShowDetail(true);
     let filteredData = movies?.find((item) => item.id === id);

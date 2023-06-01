@@ -1,12 +1,10 @@
 import { call, takeEvery, put } from "redux-saga/effects";
 import { sagaActions } from "./sagaActions";
-import movieApi from "../movieApi";
+import movieApi from "./movieApi";
 import { getAllMovies, deleteMovie, addMovie, editMovie } from "./movieSlice";
 
 export function* fetchAllMovies() {
   try {
-    // let response = yield call(() => movieApi.get(`/movie?api_key=${APIKEY}`));
-    // yield put(getAllMovies(response.data.results));
     let response = yield call(() => movieApi.get(`/Issues`));
     yield put(getAllMovies(response.data));
   } catch (e) {

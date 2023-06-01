@@ -1,6 +1,5 @@
 import React from "react";
 import "../styling/MovieCard.css";
-import { imgurl } from "./img";
 
 const MovieCard = (props) => {
   const { data } = props;

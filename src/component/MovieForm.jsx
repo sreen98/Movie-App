@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styling/MovieForm.css";
 import { useDispatch, useSelector } from "react-redux";
-import { sagaActions } from "../common/api/actions/sagaActions";
+import { sagaActions } from "../actions/sagaActions";
 
 const dropdownOptions = [
   "Action",
@@ -31,7 +31,7 @@ function MovieForm(props) {
 
   useEffect(() => {
     setReqData(editDetails);
-  }, [isEditToggle]);
+  }, [isEditToggle, editDetails]);
 
   const handleSubmit = () => {
     if (isEditToggle)
@@ -52,11 +52,9 @@ function MovieForm(props) {
 
     fileReader.onload = (event) => {
       _reqData["imgURL"] = event.target.result;
-      // console.log("img", event.target.result);
     };
     setReqData(_reqData);
   };
-  console.log();
   return (
     <div>
       <div className={showHideClassName}>

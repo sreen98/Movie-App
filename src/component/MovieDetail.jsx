@@ -5,7 +5,7 @@ import {
   toggleShowForm,
   toggleisEdit,
   setEditDetail,
-} from "../common/api/actions/movieSlice";
+} from "../actions/movieSlice";
 import { useDispatch } from "react-redux";
 
 const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
@@ -28,13 +28,7 @@ const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
           <div className="card-inner">
             <img
               src="./icons/CloseIcon.png"
-              style={{
-                marginRight: "0",
-                float: "right",
-                height: "30px",
-                width: "30px",
-                padding: "0.5rem 0.5rem 0 0",
-              }}
+              className="closeIcon"
               onClick={handleClose}
               alt="Close Icon"
             />

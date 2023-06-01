@@ -5,6 +5,7 @@ const initialState = {
   showForm: false,
   isEdit: false,
   editDetail: {},
+  isLoader: false,
 };
 
 const movieSlice = createSlice({
@@ -36,6 +37,9 @@ const movieSlice = createSlice({
     setEditDetail: (state, action) => {
       state.editDetail = action.payload;
     },
+    toggleLoader: (state, action) => {
+      state.isLoader = action.payload;
+    },
   },
 });
 
@@ -47,5 +51,6 @@ export const {
   toggleShowForm,
   toggleisEdit,
   setEditDetail,
+  toggleLoader,
 } = movieSlice.actions;
 export default movieSlice.reducer;

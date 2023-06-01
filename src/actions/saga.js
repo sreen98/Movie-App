@@ -1,7 +1,13 @@
 import { call, takeEvery, put } from "redux-saga/effects";
 import { sagaActions } from "./sagaActions";
 import movieApi from "./movieApi";
-import { getAllMovies, deleteMovie, addMovie, editMovie } from "./movieSlice";
+import {
+  getAllMovies,
+  deleteMovie,
+  addMovie,
+  editMovie,
+  toggleLoader,
+} from "./movieSlice";
 
 export function* fetchAllMovies() {
   try {
@@ -10,8 +16,11 @@ export function* fetchAllMovies() {
   } catch (e) {
     console.log(e);
   }
+  yield put(toggleLoader(false));
 }
 export function* addMovieSaga(action) {
+  yield put(toggleLoader(true));
+
   try {
     let data = action.payload;
     let response = yield call(() => movieApi.post(`/Issues`, data));
@@ -19,8 +28,11 @@ export function* addMovieSaga(action) {
   } catch (e) {
     console.log(e);
   }
+  yield put(toggleLoader(false));
 }
 export function* editMovieSaga(action) {
+  yield put(toggleLoader(true));
+
   try {
     let data = action.payload;
     let response = yield call(() => movieApi.put(`/Issues/${data.id}`, data));
@@ -28,8 +40,10 @@ export function* editMovieSaga(action) {
   } catch (e) {
     console.log(e);
   }
+  yield put(toggleLoader(false));
 }
 export function* deleteMovieSaga(action) {
+  yield put(toggleLoader(true));
   try {
     let id = action.payload;
     yield call(() => movieApi.delete(`/Issues/${id}`));
@@ -37,6 +51,7 @@ export function* deleteMovieSaga(action) {
   } catch (e) {
     console.log(e);
   }
+  yield put(toggleLoader(false));
 }
 
 export default function* rootSaga() {

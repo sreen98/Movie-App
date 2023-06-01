@@ -86,11 +86,14 @@ function MovieForm(props) {
                   </div>
                   <div className="row">
                     <label className="column">Description</label>
-                    <input
-                      type="text"
+                    <textarea
                       className="column"
+                      id="description"
+                      name="description"
                       value={reqData.description}
                       onChange={(e) => handleOnChange(e, "description")}
+                      rows="5"
+                      cols="33"
                     />
                   </div>
                   <div className="row">

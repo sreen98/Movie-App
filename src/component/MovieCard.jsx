@@ -1,22 +1,20 @@
 import React from "react";
 import "../styling/MovieCard.css";
 
-// const IMGPATH = "https://image.tmdb.org/t/p/w1280";
-
 const MovieCard = (props) => {
   const { data } = props;
-  const onFileChange = (e) => {
-    let files = e.target.files;
-    let fileReader = new FileReader();
-    fileReader.readAsDataURL(files[0]);
+  // const onFileChange = (e) => {
+  //   let files = e.target.files;
+  //   let fileReader = new FileReader();
+  //   fileReader.readAsDataURL(files[0]);
 
-    fileReader.onload = (event) => {
-      /*  this.setState({
-        selectedImage: event.target.result,
-      }); */
-      console.log("img", event.target.result);
-    };
-  };
+  //   fileReader.onload = (event) => {
+  //     /*  this.setState({
+  //       selectedImage: event.target.result,
+  //     }); */
+  //     console.log("img", event.target.result);
+  //   };
+  // };
   return (
     <div className="card-item" onClick={() => props.handleClick(data.id)}>
       {/* <input
@@ -39,7 +37,7 @@ const MovieCard = (props) => {
                 ? `${data.description.substring(0, 10)}...`
                 : data.description}
             </p>
-            <p>{`Duration: ${data.duration}`}</p>
+            <p>{`Duration: ${data.duration} hr`}</p>
             <p>{`Genre: ${data.genre}`}</p>
           </div>
         </div>

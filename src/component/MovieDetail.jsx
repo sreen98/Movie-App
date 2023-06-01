@@ -1,12 +1,24 @@
 import React from "react";
 import "../styling/MovieDetail.css";
 import "../styling/MovieCard.css";
-// const IMGPATH = "https://image.tmdb.org/t/p/w1280";
+import {
+  toggleShowForm,
+  toggleisEdit,
+  setEditDetail,
+} from "../common/api/actions/movieSlice";
+import { useDispatch } from "react-redux";
 
 const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
+  const dispatch = useDispatch();
   const onClickDelete = (id) => {
     handleDeleteButton(id);
     handleClose();
+  };
+  const onClickEdit = (details) => {
+    handleClose();
+    dispatch(toggleShowForm(true));
+    dispatch(toggleisEdit(true));
+    dispatch(setEditDetail(details));
   };
   const showHideClassName = show ? "modal display-block" : "modal display-none";
   return (
@@ -33,14 +45,7 @@ const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
                 justifyContent: "center",
               }}
             >
-              <div className="card-top">
-                {
-                  <img
-                    // src={IMGPATH + details.poster_path}
-                    alt={details.title}
-                  />
-                }
-              </div>
+              <div className="card-top">{<img alt={details.title} />}</div>
             </div>
 
             <div className="movieOverview">
@@ -51,12 +56,17 @@ const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
               <div className="card-info">
                 <span>
                   <h4>{details.title} </h4>
-                  <h4>{`Duration: ${details.duration}`}</h4>
+                  <h4>{`Duration: ${details.duration} hr`}</h4>
                   <h4>{`Genre: ${details.genre}`}</h4>
                 </span>
               </div>
               <div className="cardfooter">
-                <button className="editButton">Edit</button>
+                <button
+                  className="editButton"
+                  onClick={() => onClickEdit(details)}
+                >
+                  Edit
+                </button>
                 <button
                   className="deleteButton"
                   onClick={() => onClickDelete(details.id)}

@@ -101,6 +101,7 @@ function MovieForm(props) {
                     <input
                       type="number"
                       className="column"
+                      min="0"
                       value={reqData.duration}
                       onChange={(e) => handleOnChange(e, "duration")}
                     />
@@ -136,6 +137,7 @@ function MovieForm(props) {
                       className="column"
                       type="file"
                       name="image"
+                      accept="image/png, image/jpeg"
                       onChange={onFileChange}
                     />
                   </div>

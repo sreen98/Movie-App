@@ -45,7 +45,9 @@ const MovieDetail = ({ show, details, handleClose, handleDeleteButton }) => {
                 justifyContent: "center",
               }}
             >
-              <div className="card-top">{<img alt={details.title} />}</div>
+              <div className="card-top">
+                {<img src={details.imgURL} alt={details.title} />}
+              </div>
             </div>
 
             <div className="movieOverview">

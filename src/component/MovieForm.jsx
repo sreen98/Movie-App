@@ -23,6 +23,7 @@ function MovieForm(props) {
     description: "",
     duration: 0,
     genre: "Action",
+    imgUrl: "",
   });
   const dispatch = useDispatch();
   const isEditToggle = useSelector((state) => state.movies.isEdit);
@@ -43,6 +44,19 @@ function MovieForm(props) {
     _reqData[type] = e.target.value;
     setReqData(_reqData);
   };
+  const onFileChange = (e) => {
+    let _reqData = { ...reqData };
+    let files = e.target.files;
+    let fileReader = new FileReader();
+    fileReader.readAsDataURL(files[0]);
+
+    fileReader.onload = (event) => {
+      _reqData["imgURL"] = event.target.result;
+      // console.log("img", event.target.result);
+    };
+    setReqData(_reqData);
+  };
+  console.log();
   return (
     <div>
       <div className={showHideClassName}>
@@ -114,6 +128,15 @@ function MovieForm(props) {
                       <option value="Romance">Romance</option>
                       <option value="Thriller">Thriller</option> */}
                     </select>
+                  </div>
+                  <div className="row">
+                    <label className="column">Image</label>
+                    <input
+                      className="column"
+                      type="file"
+                      name="image"
+                      onChange={onFileChange}
+                    />
                   </div>
                 </form>
               </div>

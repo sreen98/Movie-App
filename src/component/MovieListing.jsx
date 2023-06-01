@@ -17,6 +17,7 @@ const MovieListing = () => {
   const dispatch = useDispatch();
   const [showDetail, setShowDetail] = useState(false);
   const [movieDetail, setMovieDetail] = useState({});
+  console.log("movies", movies);
   const onMovieClick = (id) => {
     setShowDetail(true);
     let filteredData = movies?.find((item) => item.id === id);

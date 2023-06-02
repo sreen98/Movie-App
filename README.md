@@ -1,5 +1,5 @@
 Simple Movie App
-Used React, Redux toolkit, Redux saga to implement a movie app.
+Used React, Redux Tool Kit, Redux Saga
 
 I have used json-server to create demo rest json webservice. 
 
